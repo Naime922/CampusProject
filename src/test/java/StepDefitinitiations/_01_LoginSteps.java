@@ -15,7 +15,7 @@ import java.time.Duration;
 public class _01_LoginSteps {
 
     DialogContent dialogContent=new DialogContent();
-    WebDriverWait wait=new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(30));
+
     @Given("Navigate to Campus")
     public void navigateToCampus() {
         BasicDriver.getDriver().get("https://test.mersys.io/");
@@ -24,19 +24,18 @@ public class _01_LoginSteps {
 
     @When("Enter username and password")
     public void enterUsernameAndPassword() {
-        wait.until(ExpectedConditions.visibilityOf(dialogContent.getLoginUsername()));
-        dialogContent.getLoginUsername().sendKeys("turkeyts");
-        dialogContent.getLoginPassword().sendKeys("TechnoStudy123");
+        dialogContent.sendKeysMethod(dialogContent.getLoginUsername(),"turkeyts");
+        dialogContent.sendKeysMethod(dialogContent.getLoginPassword(),"TechnoStudy123");
     }
 
     @And("Click on Login Button")
     public void clickOnLoginButton() {
-      dialogContent.getLoginButton().click();
+      dialogContent.clickMethod(dialogContent.getLoginButton());
     }
 
     @Then("User should login Successfully")
     public void userShouldLoginSuccessfully() {
-        wait.until(ExpectedConditions.visibilityOf(dialogContent.getDashBoardHeader()));
+       dialogContent.waitUntilVisible(dialogContent.getDashBoardHeader());
         Assert.assertTrue(dialogContent.getDashBoardHeader().isDisplayed());
 
     }

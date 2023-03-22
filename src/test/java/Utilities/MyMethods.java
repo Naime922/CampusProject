@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class MyMethods {
 
-    WebDriverWait wait = new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(10));
+    public WebDriverWait wait = new WebDriverWait(BasicDriver.getDriver(), Duration.ofSeconds(10));
 
     public void sendKeysMethod(WebElement element, String keys){
         waitUntilVisible(element);
@@ -42,6 +42,7 @@ public class MyMethods {
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().contains(value));
     }
+
 
 
 
