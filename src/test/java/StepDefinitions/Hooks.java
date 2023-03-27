@@ -1,10 +1,8 @@
-package StepDefitinitiations;
+package StepDefinitions;
 
 import Utilities.BasicDriver;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
 
 public class Hooks {
     @Before

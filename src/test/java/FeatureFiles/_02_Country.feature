@@ -7,6 +7,7 @@ Feature: Country Functionality
     Then User should login Successfully
     And Navigate to County page
 
+    @SmokeTest
   Scenario: Create Country
     #   Given Navigate to Campus
    #   When Enter username and password
@@ -16,6 +17,7 @@ Feature: Country Functionality
     When Create a new country
     Then Success message should be displayed
 
+  @Regression
     Scenario: Delete Country
 #      Given Navigate to Campus
 #      When Enter username and password

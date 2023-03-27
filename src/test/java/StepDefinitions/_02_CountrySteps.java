@@ -1,8 +1,7 @@
-package StepDefitinitiations;
+package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.Navigation;
-import Utilities.MyMethods;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

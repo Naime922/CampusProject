@@ -1,4 +1,4 @@
-package StepDefitinitiations;
+package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.Navigation;
