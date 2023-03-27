@@ -35,7 +35,7 @@ public class _02_CountrySteps {
     @When("Delete country")
     public void deleteCountry() throws InterruptedException {
         dc.sendKeysMethod(dc.getNameSearch(),"USA93");
-        dc.sendKeysMethod(dc.getSearchButton(),"U45");
+        dc.sendKeysMethod(dc.getCodeSearch(),"U45");
         dc.clickMethod(dc.getSearchButton());
         dc.wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.cssSelector("ms-delete-button[class='ng-star-inserted']"),10));
         dc.clickMethod(dc.getDeleteButton());
