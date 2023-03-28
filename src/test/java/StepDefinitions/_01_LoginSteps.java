@@ -1,7 +1,7 @@
 package StepDefinitions;
 
 import Pages.DialogContent;
-import Utilities.BasicDriver;
+import Utilities.DriverClass;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,8 +14,8 @@ public class _01_LoginSteps {
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
-        BasicDriver.getDriver().get("https://test.mersys.io/");
-        BasicDriver.getDriver().manage().window().maximize();
+        DriverClass.getDriver().get("https://test.mersys.io/");
+        DriverClass.getDriver().manage().window().maximize();
     }
 
     @When("Enter username and password")
